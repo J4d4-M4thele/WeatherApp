@@ -8,13 +8,11 @@ function WeatherApp() {
      setCityName(e.target.value);
   }
     const fetchWeatherAPI = async() =>{
-      const APIkey = "9e0a6f61bfbd92aa14313f54af00d7e9Y";
+      const APIkey = "e257d39b7b16933ed142ff9a1b4c93f6";
       const APIurl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${APIkey}`;
       const resp = await fetch(APIurl);
       const respJson = await resp.json();
-      setWeatherData(respJson);
-      
-       
+      setWeatherData(respJson);   
     }
 let handleMouseOut =(e) =>{
   
